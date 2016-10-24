@@ -84,9 +84,9 @@
        
         <div id="ip">
             <h3>User Agent Info</h3>
-            <p><? echo $_SERVER['HTTP_USER_AGENT'] ?></p>
+            <p><?php echo $_SERVER['HTTP_USER_AGENT'] ?></p>
             <h3>Your IP Adress</h3>
-            <p><? echo $_SERVER['REMOTE_ADDR'] ?></p>
+            <p><?php echo $_SERVER['REMOTE_ADDR'] ?></p>
             
             <h3>Your port</h3>
             <p><? echo $_SERVER['REMOTE_PORT']?></p>
