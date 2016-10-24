@@ -89,7 +89,7 @@
             <p><?php echo $_SERVER['REMOTE_ADDR'] ?></p>
             
             <h3>Your port</h3>
-            <p><? echo $_SERVER['REMOTE_PORT']?></p>
+            <p><?php echo $_SERVER['REMOTE_PORT']?></p>
         </div>
         
 
