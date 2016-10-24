@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Random Number Guessing Game</title>
+    </head>
+    <body>
+        <button onclick="showCode()">Show Code</button>
+        <div id="code"></div>
+        <div style="
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);"
+>
+        <h1>Guess the number!</h1>
+        <h4>Number between 0 and </h4>
+        <input type="text" id="max" onchange="changeMax(this.value)"/>
+        <hr/>
+        <h4>Enter a number: </h4>
+        <input type="text" id="yourGuess" onchange="checkAnswer(this.value)"/>
+        <h2 id="output"></h2>
+        </div>
+        
+        <script>
+        max = 0;
+function changeMax(val){
+    max = val;
+    changeRand();
+}
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+function changeRand(){
+Number = getRandomInt(0,max);}
+function checkAnswer(val){
+    if(val<Number){
+        document.getElementById("output").innerHTML = "Too Low - guess Higher &#8593";
+    }
+    if(val>Number){
+        document.getElementById("output").innerHTML = "Too High - guess Lower &#8595";
+    }
+    if(val == Number){
+        document.getElementById("output").innerHTML = "<marquee direction='right'>&#9786 Correct! High five! &#9786</marquee>";
+    }
+    
+}
+function showCode(){
+    document.getElementById("code").innerHTML = " &#60 p &#62 Number = getRandomInt(0,max);  <br /> function checkAnswer(val){  <br /> if(val &#60 Number){  <br /> document.getElementById(\"output\").innerHTML = \"Too Low - guess Higher &#8593\";  <br />} <br /> if(val &#62 Number){ <br /> document.getElementById(\"output\").innerHTML = \"Too High - guess Lower &#8595\";  <br /> }  <br /> if(val == Number){  <br /> document.getElementById(\"output\").innerHTML = \" &#60 marquee &#62 &#9786 Correct! High five! &#9786 &#60 /marquee &#62 \";  <br /> }  <br /> } &#60 /p &#62 ";
+}
+
+        </script>
+    </body>
+</html>

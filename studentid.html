@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <title>studentid</title>
+        <style>
+                #studentPicture {
+                    display:inline;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 172px;
+                    height: 228px;
+                }
+                #idNumber{
+                    display: block;
+                    margin-left:auto;
+                    margin-right:auto;
+                }
+                #studentPicture {
+                    margin: 20px;
+                }
+        </style>
+        <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+        <script src="library.js"></script>
+    </head>
+
+    <body>
+        <noscript>
+            <h1 style="text-align: center; font-size: 100px">
+                No JS No service
+            </h1>
+        </noscript>
+        <script type="text/javascript">
+        console.log("afsfd");
+        
+        $(document).ready(function(){
+           $("#idNumber").change(function(){
+               var IDString = $("#idNumber").val();
+               var IDArray = IDString.split(" ");
+               var content = "";
+               console.log(IDString);
+               console.log("Array: " + IDArray);
+               for(var i = 0; i < IDArray.length; i++){
+                   console.log(i + " : " + IDArray[i]);
+                   console.log(getIdImageHTMLwithDim(IDArray[i],172,228));
+                   content = content + "<div id='studentPicture'>" + getIdImageHTMLwithDim(IDArray[i],172,228) + "</div>";
+                   
+               }
+               $("#studentPictures").html(content);
+           }); 
+        });
+        
+        
+        </script>
+        <div id="studentPictures"></div>
+        <h3>Enter Student ID's separated by spaces - leading zeros don't matter</h3>
+        <input id="idNumber" type="text" name="idNumber">
+    </body>
+</html>
