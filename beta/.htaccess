@@ -8,3 +8,18 @@ AuthUserFile "/membri/spaceexplorers/beta/.htpasswd"
 require valid-user
 </Limit> 
 # Auth
+
+<Files .htaccess>
+ order allow,deny
+ deny from all
+</Files>
+
+<Files .htpasswd>
+ order allow,deny
+ deny from all
+</Files>
+
+<Files .mysqlpassword>
+ order allow,deny
+ deny from all
+</Files>
