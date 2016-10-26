@@ -13,7 +13,7 @@ require valid-user
  order allow,deny
  deny from all
 </Files>
-grabage fmjfjfjdj
+
 <Files .htpasswd>
  order allow,deny
  deny from all
