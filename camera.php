@@ -11,6 +11,7 @@
             
             header('Content-type: image/jpeg');
             echo file_get_contents("admin:pass1634@192.168.1.22/video.cgi");
+            ?>
         </div>
     </body>
 </html>
